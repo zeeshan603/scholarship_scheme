@@ -225,7 +225,7 @@
       font-size: 1.2rem;
       transition: all 0.3s ease;
       box-shadow: 0 6px 20px rgba(41, 128, 185, 0.35);
-      letter-spacing: 0.06em;
+      letterunto-8px; letter-spacing: 0.06em;
       user-select: none;
     }
 
@@ -327,14 +327,38 @@
       transform: translateY(-3px);
     }
 
+    /* Image container styles */
+    .image-container {
+      text-align: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 100%;
+      max-width: 300px; /* Limit max width for larger screens */
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem; /* Reduced font size for mobile */
       }
       .container {
-        margin: -2rem auto 2rem;
-        padding: 2rem 2rem;
+        margin: -2rem auto 1.5rem;
+        padding: 1.5rem;
         border-radius: 15px;
       }
       h2 {
@@ -343,9 +367,54 @@
       h3 {
         font-size: 1.3rem;
       }
+      p, li {
+        font-size: 1rem; /* Smaller text for mobile */
+      }
+      .quote-container {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+      }
       .form-container {
-        padding: 2rem 2rem;
+        padding: 1.5rem;
         max-width: 100%;
+      }
+      .apply-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+      .contact-box {
+        font-size: 1rem;
+        padding: 1.5rem;
+      }
+      .image-container {
+        flex-direction: column; /* Stack images vertically on mobile */
+        gap: 1.5rem;
+      }
+      .image-container img {
+        max-width: 90%; /* Slightly smaller images on mobile */
+        margin: 0 auto;
+      }
+      button.submit-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 2rem 1rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+      .form-container {
+        padding: 1rem;
+      }
+      .image-container img {
+        max-width: 100%; /* Full width for very small screens */
       }
     }
   </style>
@@ -425,6 +494,64 @@
       </li>
     </ul>
 
+    <div class="contact-box">
+      <i class="fas fa-phone-alt"></i>
+      <span>For more details, contact: 9920454860</span>
+    </div>
+
+    <div class="image-container">
+      <img
+        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/892f44c5-5efe-49aa-ae15-c0ecd6a2b435.png"
+        alt="Contact Person"
+      />
+      <img
+        src="WhatsApp Image 2025-07-14 at 19.04.58_fd1523aa.jpg"
+        alt="Scholarship Founder"
+      />
+    </div>
+
+    <div
+      style="
+        background: linear-gradient(90deg, #f1c40f, #f39c12);
+        color: var(--primary);
+        padding: 1.5rem 2rem;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(241, 196, 15, 0.4);
+        margin: 2rem 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+        user-select: none;
+      "
+    >
+      <i class="fas fa-calendar-check" style="margin-right: 0.7rem;"></i>
+      <span>
+        The Scholarship Award Ceremony will be held on <strong>15th August</strong> every year — a special day to honor
+        our achievers and inspire future generations.
+      </span>
+    </div>
+
+    <div
+      style="
+        background-color: rgba(41, 128, 185, 0.1);
+        border-left: 6px solid var(--secondary);
+        padding: 1.8rem 2.5rem;
+        border-radius: 12px;
+        margin: 3rem 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.15rem;
+        color: var(--primary);
+        box-shadow: 2px 4px 10px rgba(41, 128, 185, 0.15);
+      "
+    >
+      <i class="fas fa-trophy" style="color: var(--secondary); margin-right: 0.7rem;"></i>
+      <strong>Prize Distribution:</strong> Each recipient will receive a certificate of excellence along with their cash prize
+      in a formal ceremony conducted at their respective schools. This ceremony is designed to celebrate their hard work,
+      dedication, and encourage others to strive for academic success.
+    </div>
+
     <h2>Career Guidance</h2>
     <p>
       <i class="fas fa-graduation-cap" style="color: var(--accent)"></i> Free
@@ -436,65 +563,6 @@
         ><i class="fas fa-pen-alt"></i> Apply for Scholarship</a
       >
     </div>
-
-    <div class="contact-box">
-      <i class="fas fa-phone-alt"></i>
-      <span>For more details, contact: 9920454860</span>
-    </div>
-    <!-- Add this block after the "Scholarship Details" section and before the school-wise details -->
-
-
-<!-- Added image below contact number -->
-<div style="text-align: center; margin-top: 2rem;" >
-  <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/892f44c5-5efe-49aa-ae15-c0ecd6a2b435.png" alt="Contact Person"  />
-  <img  src="WhatsApp Image 2025-07-14 at 19.04.58_fd1523aa.jpg" alt="scholarship founder"  >
-
-
-</div>
-
-<div
-  style="
-    background: linear-gradient(90deg, #f1c40f, #f39c12);
-    color: var(--primary);
-    padding: 1.5rem 2rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.4);
-    margin: 2rem 0;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.3rem;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1px;
-    user-select: none;
-  "
->
-  <i class="fas fa-calendar-check" style="margin-right: 0.7rem;"></i>
-  <span>
-    The Scholarship Award Ceremony will be held on <strong>15th August</strong> every year — a special day to honor
-    our achievers and inspire future generations.
-  </span>
-</div>
-
-<!-- Add this block near the bottom, just above Career Guidance section -->
-
-<div
-  style="
-    background-color: rgba(41, 128, 185, 0.1);
-    border-left: 6px solid var(--secondary);
-    padding: 1.8rem 2.5rem;
-    border-radius: 12px;
-    margin: 3rem 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.15rem;
-    color: var(--primary);
-    box-shadow: 2px 4px 10px rgba(41, 128, 185, 0.15);
-  "
->
-  <i class="fas fa-trophy" style="color: var(--secondary); margin-right: 0.7rem;"></i>
-  <strong>Prize Distribution:</strong> Each recipient will receive a certificate of excellence along with their cash prize
-  in a formal ceremony conducted at their respective schools. This ceremony is designed to celebrate their hard work,
-  dedication, and encourage others to strive for academic success.
-</div>
 
     <h2 id="apply" style="text-align: center; margin-top: 4rem;">Apply Now</h2>
 
@@ -570,7 +638,7 @@
           rows="3"
         ></textarea>
 
-        <label for="residenceProof">Proof of Residence <span style="color: var(--accent)">*</span></label>
+  <label for="residenceProof">Proof of Residence <span style="color: var(--accent)">*</span></label>
         <select id="residenceProof" name="residenceProof" required>
           <option value="" disabled selected>Select proof type</option>
           <option value="Aadhaar Card">Aadhaar Card</option>
