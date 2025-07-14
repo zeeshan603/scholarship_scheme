@@ -225,7 +225,7 @@
       font-size: 1.2rem;
       transition: all 0.3s ease;
       box-shadow: 0 6px 20px rgba(41, 128, 185, 0.35);
-      letterunto-8px; letter-spacing: 0.06em;
+      letter-spacing: 0.06em;
       user-select: none;
     }
 
@@ -327,34 +327,38 @@
       transform: translateY(-3px);
     }
 
-    /* Image container styles */
-    .image-container {
-      text-align: center;
-      margin-top: 2rem;
+    /* Image box styles */
+    .image-box {
+      background-color: rgba(241, 196, 15, 0.1);
+      border-left: 6px solid var(--accent);
+      padding: 1.8rem 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 4px 15px rgba(241, 196, 15, 0.2);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
 
-    .image-container img {
+    .image-box img {
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       width: 100%;
-      max-width: 300px; /* Limit max width for larger screens */
+      max-width: 280px; /* Slightly smaller max width for consistency */
     }
 
-    .image-container img:hover {
+    .image-box img:hover {
       transform: scale(1.05);
     }
 
     /* Responsive */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem; /* Reduced font size for mobile */
+        font-size: 2.2rem; /* Slightly larger for mobile */
       }
       .container {
         margin: -2rem auto 1.5rem;
@@ -362,17 +366,17 @@
         border-radius: 15px;
       }
       h2 {
-        font-size: 1.8rem;
+        font-size: 1.9rem; /* Slightly increased */
       }
       h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem; /* Slightly increased */
       }
       p, li {
-        font-size: 1rem; /* Smaller text for mobile */
+        font-size: 1.05rem; /* Slightly increased for readability */
       }
       .quote-container {
         padding: 1.5rem;
-        font-size: 1.1rem;
+        font-size: 1.15rem; /* Slightly increased */
       }
       .form-container {
         padding: 1.5rem;
@@ -380,23 +384,24 @@
       }
       .apply-btn {
         padding: 1rem 2rem;
-        font-size: 1rem;
+        font-size: 1.05rem; /* Slightly increased */
       }
       .contact-box {
-        font-size: 1rem;
+        font-size: 1.05rem; /* Slightly increased */
         padding: 1.5rem;
       }
-      .image-container {
+      .image-box {
         flex-direction: column; /* Stack images vertically on mobile */
-        gap: 1.5rem;
+        padding: 1.5rem;
+        gap: 1.2rem;
       }
-      .image-container img {
+      .image-box img {
         max-width: 90%; /* Slightly smaller images on mobile */
         margin: 0 auto;
       }
       button.submit-btn {
         padding: 1rem 2rem;
-        font-size: 1.1rem;
+        font-size: 1.15rem; /* Slightly increased */
       }
     }
 
@@ -405,7 +410,7 @@
         padding: 2rem 1rem;
       }
       header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem; /* Slightly increased */
       }
       .container {
         padding: 1rem;
@@ -413,8 +418,14 @@
       .form-container {
         padding: 1rem;
       }
-      .image-container img {
+      .image-box img {
         max-width: 100%; /* Full width for very small screens */
+      }
+      p, li {
+        font-size: 1rem; /* Slightly increased */
+      }
+      .quote-container {
+        font-size: 1.1rem; /* Slightly increased */
       }
     }
   </style>
@@ -499,7 +510,7 @@
       <span>For more details, contact: 9920454860</span>
     </div>
 
-    <div class="image-container">
+    <div class="image-box">
       <img
         src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/892f44c5-5efe-49aa-ae15-c0ecd6a2b435.png"
         alt="Contact Person"
@@ -534,8 +545,8 @@
     </div>
 
     <div
-      style="
-        background-color: rgba(41, 128, 185, 0.1);
+      style=
+      "background-color: rgba(41, 128, 185, 0.1);
         border-left: 6px solid var(--secondary);
         padding: 1.8rem 2.5rem;
         border-radius: 12px;
@@ -638,7 +649,7 @@
           rows="3"
         ></textarea>
 
-  <label for="residenceProof">Proof of Residence <span style="color: var(--accent)">*</span></label>
+        <label for="residenceProof">Proof of Residence <span style="color: var(--accent)">*</span></label>
         <select id="residenceProof" name="residenceProof" required>
           <option value="" disabled selected>Select proof type</option>
           <option value="Aadhaar Card">Aadhaar Card</option>
